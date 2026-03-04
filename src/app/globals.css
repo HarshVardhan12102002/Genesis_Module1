@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@import "../styles/animations.css";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  --card-bg: #121212;
+  --card-bg-soft: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Avenir Next", "Montserrat", "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", "Menlo", "Monaco", monospace;
+}
+
+* {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, rgba(124, 58, 237, 0.12), transparent 35%),
+    radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.12), transparent 32%), var(--background);
+  color: var(--foreground);
+  font-family: "Avenir Next", "Montserrat", "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.45);
+  color: #fff;
+}
