@@ -1,63 +1,134 @@
+<div align="center">
+
 # GitHub Profile Explainer
 
-Premium, animated GitHub profile analysis app built with Next.js App Router, TypeScript, Tailwind CSS, Framer Motion, and Recharts.
+### Decode Any GitHub Profile with a Premium, Animated Experience
 
-## Features
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind](https://img.shields.io/badge/TailwindCSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-Animations-0055FF?style=for-the-badge)](https://www.framer.com/motion/)
+[![Netlify Status](https://img.shields.io/badge/Deployed%20on-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://github-profile-explainer-hvs.netlify.app)
 
-- CRED-inspired dark, premium landing and analysis experience
-- GitHub profile URL input and username extraction
-- API route backend for GitHub REST integration (`/api/github`)
-- Insight engine for developer summary, tech stack, top repositories, personality, and complexity/activity breakdowns
-- Count-up stats, scroll-reveal animations, hover glow cards, loading skeletons, typing effects
-- Dynamic/lazy-loaded heavy analysis sections for smooth performance
+### Live Demo
 
-## Stack
+## [github-profile-explainer-hvs.netlify.app](https://github-profile-explainer-hvs.netlify.app)
+
+</div>
+
+---
+
+## What is this?
+
+**GitHub Profile Explainer** is a CRED-inspired developer intelligence app.
+Paste any GitHub profile URL and get a rich, animated breakdown of:
+
+- Developer summary and social proof
+- Tech stack distribution
+- Top repositories and activity signals
+- Coding personality interpretation
+- Codebase complexity/activity insights
+
+---
+
+## Core Features
+
+- Dark premium UI with glow gradients + glassmorphism cards
+- Smooth page transitions and section reveal animations
+- Animated stat counters, typing effects, skeleton loaders
+- GitHub REST API integration through Next.js API routes
+- Insight engine for language aggregation + repository scoring
+- Lazy-loaded analysis sections for better performance
+
+---
+
+## Tech Stack
+
+### Frontend
 
 - Next.js (App Router)
 - TypeScript
 - Tailwind CSS
 - Framer Motion
-- shadcn-style component primitives
-- lucide-react
+- shadcn-style reusable UI primitives
+- lucide-react icons
 - Recharts
 - react-countup
 - react-type-animation
 
-## Setup
+### Backend
 
-1. Install dependencies:
+- Next.js Route Handlers (`/api/github`)
+- GitHub REST API (`/users/{username}`, `/users/{username}/repos`)
+
+---
+
+## Quick Start
+
+1. Install dependencies
 
 ```bash
 npm install
 ```
 
-2. Configure environment:
+2. Create environment file
 
 ```bash
 cp .env.example .env.local
 ```
 
-3. (Optional) Add `GITHUB_TOKEN` in `.env.local` for higher GitHub API rate limits.
+3. (Optional but recommended) add a GitHub token in `.env.local`
 
-4. Run development server:
+```bash
+GITHUB_TOKEN=your_github_token
+```
+
+4. Start dev server
 
 ```bash
 npm run dev
 ```
 
-## Routes
+5. Open
+
+- [http://localhost:3000](http://localhost:3000)
+
+---
+
+## Production Deployment (Netlify)
+
+- **Production URL:** [https://github-profile-explainer-hvs.netlify.app](https://github-profile-explainer-hvs.netlify.app)
+- **Unique Deploy URL:** [https://69a8327cef5bcc37e9951561--github-profile-explainer-hvs.netlify.app](https://69a8327cef5bcc37e9951561--github-profile-explainer-hvs.netlify.app)
+
+---
+
+## App Routes
 
 - `/` Landing page
-- `/analysis/[username]` Animated analysis dashboard
-- `/api/github?username=<username>` Analysis API endpoint
+- `/analysis/[username]` Analysis dashboard
+- `/api/github?username=<username>` API endpoint
+
+---
 
 ## Project Structure
 
-- `src/app`
-- `src/app/api/github`
-- `src/components`
-- `src/components/ui`
-- `src/analysis`
-- `src/lib/github`
-- `src/utils/analysis`
-- `src/styles`
+```text
+src/
+  app/
+    api/github/
+    analysis/[username]/
+  components/
+    sections/
+    ui/
+  analysis/
+  lib/github/
+  utils/analysis/
+  styles/
+```
+
+---
+
+## Notes
+
+- For production reliability, set `GITHUB_TOKEN` in Netlify environment variables.
+- Without token, GitHub rate limits can trigger 403 responses on heavy usage.
