@@ -20,7 +20,7 @@
 
 ## What is this?
 
-**GitHub Profile Explainer** is a CRED-inspired developer intelligence app.
+**GitHub Profile Explainer** is a Developer intelligence app.
 Paste any GitHub profile URL and get a rich, animated breakdown of:
 
 - Developer summary and social proof
